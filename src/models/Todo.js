@@ -17,6 +17,14 @@ class TodoModel {
     })
     return request
   }
+
+  static delete(todo){
+    let request = $.ajax({
+      url: `https://super-crud.herokuapp.com/todos/${todo}`,
+      method: 'DELETE'
+    })
+    return request
+  }
 }
 
 export default TodoModel
